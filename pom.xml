@@ -12,6 +12,7 @@
     <modules>
         <!--数组-->
         <module>tutorial_array</module>
+        <module>tutorial_collection</module>
     </modules>
 
 
