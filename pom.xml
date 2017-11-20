@@ -13,6 +13,7 @@
         <!--数组-->
         <module>tutorial_array</module>
         <module>tutorial_collection</module>
+        <module>tutorial_reflect</module>
     </modules>
 
 
