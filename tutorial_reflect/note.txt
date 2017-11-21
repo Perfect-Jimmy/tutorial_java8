@@ -15,4 +15,24 @@ c1,c2,c3都是Class的对象,完全一样,叫做Book的类类型
 类类型是反射的基础,类类型是反射的基础,类类型是反射的基础
 
 
-创建对象的几种方法:
+创建对象的5种方式:
+1. new关键字                        →调用了构造函数
+   Book book1 = new Book();
+2. Class类的newInstance方法         →调用了构造函数
+   Book book2 = (Book)Class.forName("com.xxx.Book").newInstance();
+3. Constructor类的newInstance方法   →调用了构造函数
+   Constructor<Book> constructor = Book.class.getConstructor();
+   Book book3 = constructor.newInstance();
+4. clone方法                        → 没有调用构造函数
+   Book book4 = (Book) book3.clone();
+5. 反序列化                          → 没有调用构造函数
+   ObjectInputStream in = new ObjectInputStream(new FileInputStream("data.obj"));
+   Book book5 = (Book) in.readObject();
+
+
+反射获取类的信息:属性和方法
+1. 成员方法的信息包括:返回值+方法名+参数类型
+   类的成员方法也是一个对象,它是java.lang.reflect.Method的一个对象,通过java.lang.reflect.Method里面封装的方法来获取这些信息
+
+2. 成员变量的信息包括:成员变量类型+成员变量名
+   类的成员变量也是一个对象,它是java.lang.reflect.Field的一个对象,通过java.lang.reflect.Field里面封装的方法来获取这些信息

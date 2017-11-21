@@ -10,4 +10,14 @@ public class Book {
 
     private Long id;
     private String name;
+
+    public String print(Long id,String name){
+        System.out.println("调用print");
+        return name;
+    }
+
+    public String printA(String name){
+        System.out.println("调用A 。。。");
+        return name;
+    }
 }
