@@ -1,0 +1,18 @@
+类是对象吗?
+类是java.lang.Class类的实例对象,而Class是所有类的类
+
+普通对象获取: new关键字
+Book book = new Book();
+
+Class对象获取: 只有JVM可以创建Class的对象,因此不可以像普通类一样new一个Class对象
+1. Class c1 = Book.class;                   //通过获取类的静态成员变量class得到
+2. Class c2 = book2.getClass();             //通过一个类的对象的getClass()方法获得
+3. Class c3 = Class.forName("com.xxx.Book");//通过一个类的全量限定名获得
+
+c1,c2,c3都是Class的对象,完全一样,叫做Book的类类型
+
+
+类类型是反射的基础,类类型是反射的基础,类类型是反射的基础
+
+
+创建对象的几种方法:
