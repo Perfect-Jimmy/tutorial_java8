@@ -4,6 +4,7 @@ import java.lang.reflect.Field;
 
 /**
  * Created by jimmy on 2017/11/21.
+ * 反射获取成员变量信息:成员变量类型+成员变量名
  */
 public class ReflectFieldTest {
     public static void main(String[] args) throws NoSuchFieldException, ClassNotFoundException {

@@ -11,6 +11,7 @@ public class Book {
     private Long id;
     private String name;
 
+
     public String print(Long id,String name){
         System.out.println("调用print");
         return name;
@@ -19,5 +20,13 @@ public class Book {
     public String printA(String name){
         System.out.println("调用A 。。。");
         return name;
+    }
+
+    public Book(Long id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+    public Book() {
     }
 }

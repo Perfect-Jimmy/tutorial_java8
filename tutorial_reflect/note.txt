@@ -36,3 +36,9 @@ c1,c2,c3都是Class的对象,完全一样,叫做Book的类类型
 
 2. 成员变量的信息包括:成员变量类型+成员变量名
    类的成员变量也是一个对象,它是java.lang.reflect.Field的一个对象,通过java.lang.reflect.Field里面封装的方法来获取这些信息
+
+反射获取类的构造函数:包括构造函数参数
+构造函数也是一个对象,它是java.lang.reflect.Constructor的一个对象,通过java.lang.reflect.Constructor里面封装的方法来获取这些信息
+
+
+通过反射了解集合泛型的本质:Java中集合的泛型,是防止错误输入的,只在编译阶段有效,绕过编译到了运行期就无效了
