@@ -1,6 +1,9 @@
 类是对象吗?
 类是java.lang.Class类的实例对象,而Class是所有类的类
 
+什么是反射?
+在程序运行中动态获取类的信息,及动态调用对象的方法
+
 普通对象获取: new关键字
 Book book = new Book();
 
@@ -40,5 +43,13 @@ c1,c2,c3都是Class的对象,完全一样,叫做Book的类类型
 反射获取类的构造函数:包括构造函数参数
 构造函数也是一个对象,它是java.lang.reflect.Constructor的一个对象,通过java.lang.reflect.Constructor里面封装的方法来获取这些信息
 
+getFields():获取父类和本类public的属性
+getDeclaredFields:获取本类所有属性,包括private和protected
+
+
 
 通过反射了解集合泛型的本质:Java中集合的泛型,是防止错误输入的,只在编译阶段有效,绕过编译到了运行期就无效了
+
+
+反射缺点:
+1.性能下降

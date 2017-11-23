@@ -1,4 +1,4 @@
-package com.tutorial.reflect;
+package com.tutorial.reflect.level1;
 
 import lombok.Data;
 
